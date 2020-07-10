@@ -8,6 +8,8 @@
     {
         public void Configure(EntityTypeBuilder<DocumentsModel> builder)
         {
+            builder.HasKey(x => x.Id);
+            builder.HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn);
             builder.ToTable("Documents");
             builder.Property(p => p.Start).IsRequired();
             builder.Property(p => p.End).IsRequired();

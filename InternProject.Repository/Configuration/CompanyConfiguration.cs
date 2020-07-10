@@ -9,6 +9,8 @@
         public void Configure(EntityTypeBuilder<CompanyModel> builder)
         {
             builder.ToTable("Company");
+            builder.HasKey(x => x.Id);
+            builder.HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn);
             builder.Property(p => p.Name).HasMaxLength(100).IsRequired();
             builder.Property(p => p.PersonResponsibleName).HasMaxLength(100).IsRequired();
             builder.Property(p => p.IsIntegratingAgent).IsRequired();

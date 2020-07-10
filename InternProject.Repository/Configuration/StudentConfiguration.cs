@@ -8,6 +8,8 @@
         public void Configure(EntityTypeBuilder<StudentModel> builder)
         {
             builder.ToTable("Student");
+            builder.HasKey(x => x.Id);
+            builder.HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn);
             builder.Property(p => p.Id).IsRequired();
             builder.Property(p => p.Name).HasMaxLength(100).IsRequired();
             builder.Property(p => p.Cpf).HasMaxLength(11).IsRequired();
