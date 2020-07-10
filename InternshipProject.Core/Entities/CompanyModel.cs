@@ -10,7 +10,6 @@
         public string PersonResponsibleName { get; set; }
         public bool Active { get; set; }
         public AddressModel Address { get; set; }
-
         public DocumentsModel Document { get; set; }
 
         //TODO area de atuação ? Verificar possiveis apis externas...

@@ -5,16 +5,6 @@
 
     public class DocumentsModel
     {
-        public DocumentsModel(DocumentType documentType, DateTime start, DateTime end, CompanyModel company, StudentModel student, string comments)
-        {
-            DocumentType = documentType;
-            Start = start;
-            End = end;
-            Company = company;
-            Student = student;
-            Comments = comments;
-        }
-
         DocumentType DocumentType { get; set; }
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
