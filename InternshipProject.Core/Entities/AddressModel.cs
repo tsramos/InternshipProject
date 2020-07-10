@@ -1,8 +1,9 @@
 ﻿namespace InternshipProject.Core.Entities
 {
+    using System;
     public class AddressModel
-    {       
-        public int Id { get; set; }
+    {
+        public Guid Id { get; set; }
         public decimal CEP { get; set; }
         public string Street { get; set; }
         public int Number { get; set; }

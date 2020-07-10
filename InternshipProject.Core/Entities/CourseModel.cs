@@ -1,10 +1,11 @@
 ﻿namespace InternshipProject.Core.Entities
 {
     using InternshipProject.Core.Enuns;
+    using System;
 
     public class CourseModel
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public bool InternshipRequired { get; set; }
         public Period Period { get; set; }

@@ -1,8 +1,9 @@
 ﻿namespace InternshipProject.Core.Entities
 {
+    using System;
     public class CompanyModel
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public bool IsIntegratingAgent { get; set; }
         public decimal AgreementCode { get; set; }
