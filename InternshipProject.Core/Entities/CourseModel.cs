@@ -2,6 +2,7 @@
 {
     using InternshipProject.Core.Enuns;
     using System;
+    using System.Collections.Generic;
 
     public class CourseModel
     {
@@ -10,5 +11,7 @@
         public bool InternshipRequired { get; set; }
         public Period Period { get; set; }
         public Education Education { get; set; }
+        public IEnumerable<StudentModel> Students { get; set; }
+        public InternshipContractModel Contract { get; set; }
     }
 }

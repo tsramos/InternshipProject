@@ -13,6 +13,12 @@
         public DbSet<InternshipContractModel> InternshipContracts { get; set; }
 
         private readonly string ConnectionString;
+
+        public Context(DbContextOptions<Context> options) : base(options)
+        {
+
+        }
+
         public Context(string connectionString)
         {
             ConnectionString = connectionString;

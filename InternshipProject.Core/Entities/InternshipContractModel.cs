@@ -1,9 +1,13 @@
 ﻿namespace InternshipProject.Core.Entities
 {
-    public class InternshipContractModel : DocumentsModel
-    {        
+    using System;
+    public class InternshipContractModel
+    {
+        public Guid Id { get; set; }
         public CourseModel Course { get; set; }
         public int HoursPerWeek { get; set; }
-        //Adicionar area de atuação ?
+        public DocumentsModel Document { get; set; }
+
+
     }
 }

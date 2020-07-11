@@ -1,6 +1,8 @@
 ﻿namespace InternshipProject.Core.Entities
 {
     using System;
+    using System.Collections;
+    using System.Collections.Generic;
 
     public class StudentModel
     {       
@@ -10,5 +12,6 @@
         public string Cpf { get; set; }
         public CourseModel Course { get; set; }
         public decimal IFPRCode { get; set; }
+        public IEnumerable<DocumentsModel> Documents { get; set; }
     }
 }

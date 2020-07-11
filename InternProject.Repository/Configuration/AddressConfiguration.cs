@@ -10,7 +10,7 @@
         {
             builder.ToTable("Address");
             builder.HasKey(x => x.Id);
-            builder.HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn);
+            builder.Property(x => x.Id).ValueGeneratedOnAdd();
             builder.Property(p => p.CEP).HasMaxLength(8).IsRequired();
             builder.Property(p => p.Street).HasMaxLength(100).IsRequired();
             builder.Property(p => p.Number).HasMaxLength(8).IsRequired();

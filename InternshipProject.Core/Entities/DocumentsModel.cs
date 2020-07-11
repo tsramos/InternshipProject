@@ -2,6 +2,7 @@
 {
     using InternshipProject.Core.Enuns;
     using System;
+    using System.Collections.Generic;
 
     public class DocumentsModel
     {
@@ -12,5 +13,7 @@
         public CompanyModel Company { get; set; }
         public StudentModel Student { get; set; }
         public string Comments { get; set; }
+
+        public InternshipContractModel InternshipContract { get; set; }
     }
 }

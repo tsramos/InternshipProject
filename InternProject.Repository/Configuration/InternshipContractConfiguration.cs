@@ -3,7 +3,6 @@
     using InternshipProject.Core.Entities;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
-    using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
     public class InternshipContractConfiguration : IEntityTypeConfiguration<InternshipContractModel>
     {
@@ -11,9 +10,15 @@
         {
             builder.ToTable("InternshipContract");
             builder.HasKey(x => x.Id);
-            builder.HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn);
+            builder.Property(x => x.Id).ValueGeneratedOnAdd();
             builder.Property(p => p.HoursPerWeek);
-            builder.Property(p => p.Course);
+
+            #region Relationship
+
+            builder.HasOne(x => x.Document).WithOne(x => x.InternshipContract).HasForeignKey<DocumentsModel>(x => x.Id);
+            builder.HasOne(x => x.Course).WithOne(x => x.Contract).HasForeignKey<CourseModel>(x => x.Id);
+
+            #endregion
         }
     }
 }

@@ -10,15 +10,19 @@
         {
             builder.ToTable("Company");
             builder.HasKey(x => x.Id);
-            builder.HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn);
+            builder.Property(x => x.Id).ValueGeneratedOnAdd();
             builder.Property(p => p.Name).HasMaxLength(100).IsRequired();
             builder.Property(p => p.PersonResponsibleName).HasMaxLength(100).IsRequired();
             builder.Property(p => p.IsIntegratingAgent).IsRequired();
             builder.Property(p => p.AgreementCode).IsRequired();
-            builder.Property(p => p.Document).IsRequired();
             builder.Property(p => p.CNPJ).HasMaxLength(14).IsRequired();
             builder.Property(p => p.Active).IsRequired();
 
+            #region Relantionship
+
+            builder.HasOne(x => x.Address).WithOne(a => a.Company).HasForeignKey<AddressModel>(x => x.Id);
+
+            #endregion
         }
     }
 }
