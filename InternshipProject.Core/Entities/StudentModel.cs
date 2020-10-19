@@ -1,10 +1,9 @@
 ﻿namespace InternshipProject.Core.Entities
 {
     using System;
-    using System.Collections;
     using System.Collections.Generic;
 
-    public class StudentModel
+    public class StudentModel : EntityBase
     {       
         public Guid Id { get; set; }
         public string Name { get; set; }

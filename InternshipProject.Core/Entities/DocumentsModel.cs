@@ -2,9 +2,8 @@
 {
     using InternshipProject.Core.Enuns;
     using System;
-    using System.Collections.Generic;
 
-    public class DocumentsModel
+    public class DocumentsModel : EntityBase
     {
         public Guid Id { get; set; }
         DocumentType DocumentType { get; set; }

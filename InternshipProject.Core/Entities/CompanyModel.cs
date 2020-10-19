@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
 
-    public class CompanyModel
+    public class CompanyModel : EntityBase
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

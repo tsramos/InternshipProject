@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kjVb7Npt+n9cTXwaMd9w35swEry5y5qZu2y9c9AkclpbRPNpN1W5VjVe06vvTXhq415P566MNO2UYNzG+mQvLw==",
+  "dgSpecHash": "hFw0fiVcfg4LvWKoGx7zmyN6TGXs9Fj3qNJfK+IoKutb5cMmvrZO1f9oYOI9xCHJ4VeRzaabbmU6CBWhGAKTow==",
   "success": true,
   "projectFilePath": "C:\\Users\\Tihago\\Desktop\\Estagio\\InternshipProject\\InternProject.Repository\\InternshipProject.Repository.csproj",
   "expectedPackageFiles": [
@@ -29,8 +29,7 @@
     "C:\\Users\\Tihago\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",
     "C:\\Users\\Tihago\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Users\\Tihago\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
-    "C:\\Users\\Tihago\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512",
-    "C:\\Users\\Tihago\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+    "C:\\Users\\Tihago\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
   ],
   "logs": []
 }

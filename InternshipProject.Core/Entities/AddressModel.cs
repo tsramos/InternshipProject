@@ -1,7 +1,7 @@
 ﻿namespace InternshipProject.Core.Entities
 {
     using System;
-    public class AddressModel
+    public class AddressModel : EntityBase
     {
         public Guid Id { get; set; }
         public decimal CEP { get; set; }
@@ -12,5 +12,6 @@
         public string City { get; set; }
         public string State { get; set; }
         public CompanyModel Company { get; set; }
+
     }
 }
