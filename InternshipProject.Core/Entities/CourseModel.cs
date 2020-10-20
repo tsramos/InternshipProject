@@ -6,7 +6,6 @@
 
     public class CourseModel : EntityBase
     {
-        public Guid Id { get; set; }
         public string Name { get; set; }
         public bool InternshipRequired { get; set; }
         public Period Period { get; set; }

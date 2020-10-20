@@ -5,7 +5,6 @@
 
     public class CompanyModel : EntityBase
     {
-        public Guid Id { get; set; }
         public string Name { get; set; }
         public bool IsIntegratingAgent { get; set; }
         public decimal AgreementCode { get; set; }

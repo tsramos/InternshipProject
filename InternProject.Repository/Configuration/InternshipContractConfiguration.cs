@@ -15,7 +15,7 @@
 
             #region Relationship
 
-            builder.HasOne(x => x.Document).WithOne(x => x.InternshipContract).HasForeignKey<DocumentsModel>(x => x.Id);
+            builder.HasOne(x => x.Document).WithOne(x => x.InternshipContract).HasForeignKey<DocumentsModel>(x => x.Id).OnDelete(DeleteBehavior.Cascade);
             builder.HasOne(x => x.Course).WithOne(x => x.Contract).HasForeignKey<CourseModel>(x => x.Id);
 
             #endregion

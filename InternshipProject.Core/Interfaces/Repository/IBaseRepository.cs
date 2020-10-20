@@ -11,14 +11,12 @@
 
         T Get(Guid Id);
 
-        Task<T> Add(T entity);
+        T Add(T entity);
 
-        Task<T> Update(Guid Id, T entity);
+        void Update(T entity);
 
-        Task<T> Remove(T entity);
+        void Remove(T entity);
 
-        Task<T> Remove(Guid Id);
-
-        void SaveChanges();
+        void Remove(Guid Id);
     }
 }

@@ -3,7 +3,6 @@
     using System;
     public class AddressModel : EntityBase
     {
-        public Guid Id { get; set; }
         public decimal CEP { get; set; }
         public string Street { get; set; }
         public int Number { get; set; }

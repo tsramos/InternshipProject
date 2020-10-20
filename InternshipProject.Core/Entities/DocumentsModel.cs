@@ -5,7 +5,6 @@
 
     public class DocumentsModel : EntityBase
     {
-        public Guid Id { get; set; }
         DocumentType DocumentType { get; set; }
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
