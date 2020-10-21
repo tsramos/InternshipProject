@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "oKIdW0NnSjMQ/d/u/QZadv4P/dsaRzxGsVI3Am09kSkL9IrMBhpfLPX7dGQErZvw+zi9l+A3QWosEdU6xvzc4g==",
+  "dgSpecHash": "LPUMAs54H8zdQErcHvKYd4wluOj2G9RJ6MB9Qond/XdPJzhPDLbxrFpfgac0iLYlzlOSAB4UPqLok4/KGkHDeQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Tihago\\Desktop\\Estagio\\InternshipProject\\InternshipProject.Services\\InternshipProject.Services.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Tihago\\.nuget\\packages\\fluentvalidation\\9.2.2\\fluentvalidation.9.2.2.nupkg.sha512"
+  ],
   "logs": []
 }
