@@ -5,18 +5,17 @@
     using InternshipProject.Core.Interfaces.Services;
     using InternshipProject.Services.Validator;
     using System;
-    using System.Data;
     using System.Linq;
-    
-    public class StudentService : BaseService<StudentModel>, IStudentService
+
+    public class CompanyService : BaseService<CompanyModel>, ICompanyService
     {
-        public StudentService(IStudentRepository studentRepository) : base(studentRepository)
+        public CompanyService(IBaseRepository<CompanyModel> baseRepository) : base(baseRepository)
         {
         }
 
-        public override void Validate(StudentModel entity)
+        public override void Validate(CompanyModel entity)
         {
-            StudentValidator validator = new StudentValidator();
+            CompanyValidator validator = new CompanyValidator();
             var result = validator.Validate(entity);
             if (!result.IsValid)
             {

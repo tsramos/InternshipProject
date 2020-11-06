@@ -1,22 +1,21 @@
 ﻿namespace InternshipProject.Services
 {
+    using InternshipProject.Core.Interfaces.Services;
     using InternshipProject.Core.Entities;
     using InternshipProject.Core.Interfaces.Repository;
-    using InternshipProject.Core.Interfaces.Services;
     using InternshipProject.Services.Validator;
     using System;
-    using System.Data;
     using System.Linq;
-    
-    public class StudentService : BaseService<StudentModel>, IStudentService
+
+    public class DocumentService : BaseService<DocumentsModel>, IDocumentService
     {
-        public StudentService(IStudentRepository studentRepository) : base(studentRepository)
+        public DocumentService(IBaseRepository<DocumentsModel> baseRepository) : base(baseRepository)
         {
         }
 
-        public override void Validate(StudentModel entity)
+        public override void Validate(DocumentsModel entity)
         {
-            StudentValidator validator = new StudentValidator();
+            DocumentValidator validator = new DocumentValidator();
             var result = validator.Validate(entity);
             if (!result.IsValid)
             {
