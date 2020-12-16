@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "LPUMAs54H8zdQErcHvKYd4wluOj2G9RJ6MB9Qond/XdPJzhPDLbxrFpfgac0iLYlzlOSAB4UPqLok4/KGkHDeQ==",
+  "dgSpecHash": "Mtb0HrIp1gNoMk4vh//IWuc4zdPBhd2drG2vMxKug1hQMa0m3Sxj4gyg9y6D6DM+BuakcDxardvucuCPEx8QgA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tihago\\Desktop\\Estagio\\InternshipProject\\InternshipProject.Services\\InternshipProject.Services.csproj",
+  "projectFilePath": "C:\\Users\\Tihago\\Desktop\\IFPR\\ProjetoEstagios\\InternshipProject\\InternshipProject.Services\\InternshipProject.Services.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Tihago\\.nuget\\packages\\fluentvalidation\\9.2.2\\fluentvalidation.9.2.2.nupkg.sha512"
+    "C:\\Users\\Tihago\\.nuget\\packages\\fluentvalidation\\9.2.2\\fluentvalidation.9.2.2.nupkg.sha512",
+    "C:\\Users\\Tihago\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
   ],
   "logs": []
 }

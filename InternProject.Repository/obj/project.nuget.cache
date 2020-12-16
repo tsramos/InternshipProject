@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hFw0fiVcfg4LvWKoGx7zmyN6TGXs9Fj3qNJfK+IoKutb5cMmvrZO1f9oYOI9xCHJ4VeRzaabbmU6CBWhGAKTow==",
+  "dgSpecHash": "V7ihYBGQWxGjMiye54L5m/Xo56HGxpSeHzplmz4OIPLbbUcb12QiTo1uHLBsurtT7eQPUwdO23J7/MNezoWvEg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tihago\\Desktop\\Estagio\\InternshipProject\\InternProject.Repository\\InternshipProject.Repository.csproj",
+  "projectFilePath": "C:\\Users\\Tihago\\Desktop\\IFPR\\ProjetoEstagios\\InternshipProject\\InternProject.Repository\\InternshipProject.Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tihago\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Tihago\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
@@ -29,7 +29,8 @@
     "C:\\Users\\Tihago\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",
     "C:\\Users\\Tihago\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Users\\Tihago\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
-    "C:\\Users\\Tihago\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
+    "C:\\Users\\Tihago\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512",
+    "C:\\Users\\Tihago\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
   ],
   "logs": []
 }

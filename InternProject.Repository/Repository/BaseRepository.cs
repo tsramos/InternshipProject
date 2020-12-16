@@ -1,22 +1,22 @@
-﻿using InternshipProject.Core.Entities;
-using InternshipProject.Core.Interfaces.Repository;
-using System;
-using System.Linq;
-
-namespace InternshipProject.Repository.Repository
+﻿namespace InternshipProject.Repository.Repository
 {
+    using InternshipProject.Core.Entities;
+    using InternshipProject.Core.Interfaces.Repository;
+    using System;
+    using System.Linq;
+
     public class BaseRepository<T> : IBaseRepository<T> where T : EntityBase
     {
-
         private readonly Context context;
+
         public BaseRepository(Context context)
         {
             this.context = context;
         }
         public T Add(T entity)
         {
-           this.context.Set<T>().Add(entity);
-           return entity;
+            this.context.Set<T>().Add(entity);
+            return entity;
         }
 
         public IQueryable<T> Get()
@@ -32,7 +32,7 @@ namespace InternshipProject.Repository.Repository
         public void Remove(T entity)
         {
             this.context.Set<T>().RemoveRange(entity);
-            this.context.SaveChanges();           
+            this.context.SaveChanges();
         }
 
         public void Remove(Guid Id)

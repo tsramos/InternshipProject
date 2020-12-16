@@ -9,10 +9,11 @@
 
     public class AddressService : BaseService<AddressModel>, IAddressService
     {
+
         public AddressService(IBaseRepository<AddressModel> baseRepository) : base(baseRepository)
         {
+     
         }
-
         public override void Validate(AddressModel entity)
         {
             AddressValidator validator = new AddressValidator();

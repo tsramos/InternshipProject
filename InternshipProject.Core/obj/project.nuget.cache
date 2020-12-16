@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lXQ4U//vjy6wlKajtCOyDZolOSHX/97I4pEeZyypAyeAyGuhXbWoUAKRXGHNAT4i+ilwMLr0y3Wyuf1ob5537g==",
+  "dgSpecHash": "tPt2NBs1sREIUIQcTqk55vAhr/uX89XcFU5DFKo4f+hR0nfMD89nWTmy+ZlbZbEq8mJ3S5gh0/kdBbOvhvVQag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tihago\\Desktop\\Estagio\\InternshipProject\\InternshipProject.Core\\InternshipProject.Core.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Tihago\\Desktop\\IFPR\\ProjetoEstagios\\InternshipProject\\InternshipProject.Core\\InternshipProject.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Tihago\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tihago\\Desktop\\Estagio\\InternshipProject\\InternProject.Repository\\InternshipProject.Repository.csproj": {}
+    "C:\\Users\\Tihago\\Desktop\\IFPR\\ProjetoEstagios\\InternshipProject\\InternProject.Repository\\InternshipProject.Repository.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tihago\\Desktop\\Estagio\\InternshipProject\\InternProject.Repository\\InternshipProject.Repository.csproj": {
+    "C:\\Users\\Tihago\\Desktop\\IFPR\\ProjetoEstagios\\InternshipProject\\InternProject.Repository\\InternshipProject.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tihago\\Desktop\\Estagio\\InternshipProject\\InternProject.Repository\\InternshipProject.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Tihago\\Desktop\\IFPR\\ProjetoEstagios\\InternshipProject\\InternProject.Repository\\InternshipProject.Repository.csproj",
         "projectName": "InternshipProject.Repository",
-        "projectPath": "C:\\Users\\Tihago\\Desktop\\Estagio\\InternshipProject\\InternProject.Repository\\InternshipProject.Repository.csproj",
+        "projectPath": "C:\\Users\\Tihago\\Desktop\\IFPR\\ProjetoEstagios\\InternshipProject\\InternProject.Repository\\InternshipProject.Repository.csproj",
         "packagesPath": "C:\\Users\\Tihago\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tihago\\Desktop\\Estagio\\InternshipProject\\InternProject.Repository\\obj\\",
+        "outputPath": "C:\\Users\\Tihago\\Desktop\\IFPR\\ProjetoEstagios\\InternshipProject\\InternProject.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -27,14 +27,16 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Tihago\\Desktop\\ART\\git\\ARTTools\\art.tools.amaps.compiler.protobuf\\src\\Art.Tools.Amaps.Compiler.Protobuf\\bin\\Debug": {},
           "http://12.1.0.5/nuget/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Tihago\\Desktop\\Estagio\\InternshipProject\\InternshipProject.Core\\InternshipProject.Core.csproj": {
-                "projectPath": "C:\\Users\\Tihago\\Desktop\\Estagio\\InternshipProject\\InternshipProject.Core\\InternshipProject.Core.csproj"
+              "C:\\Users\\Tihago\\Desktop\\IFPR\\ProjetoEstagios\\InternshipProject\\InternshipProject.Core\\InternshipProject.Core.csproj": {
+                "projectPath": "C:\\Users\\Tihago\\Desktop\\IFPR\\ProjetoEstagios\\InternshipProject\\InternshipProject.Core\\InternshipProject.Core.csproj"
               }
             }
           }
@@ -47,6 +49,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -83,23 +86,29 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Tihago\\Desktop\\Estagio\\InternshipProject\\InternshipProject.Core\\InternshipProject.Core.csproj": {
+    "C:\\Users\\Tihago\\Desktop\\IFPR\\ProjetoEstagios\\InternshipProject\\InternshipProject.Core\\InternshipProject.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tihago\\Desktop\\Estagio\\InternshipProject\\InternshipProject.Core\\InternshipProject.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Tihago\\Desktop\\IFPR\\ProjetoEstagios\\InternshipProject\\InternshipProject.Core\\InternshipProject.Core.csproj",
         "projectName": "InternshipProject.Core",
-        "projectPath": "C:\\Users\\Tihago\\Desktop\\Estagio\\InternshipProject\\InternshipProject.Core\\InternshipProject.Core.csproj",
+        "projectPath": "C:\\Users\\Tihago\\Desktop\\IFPR\\ProjetoEstagios\\InternshipProject\\InternshipProject.Core\\InternshipProject.Core.csproj",
         "packagesPath": "C:\\Users\\Tihago\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tihago\\Desktop\\Estagio\\InternshipProject\\InternshipProject.Core\\obj\\",
+        "outputPath": "C:\\Users\\Tihago\\Desktop\\IFPR\\ProjetoEstagios\\InternshipProject\\InternshipProject.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -115,11 +124,13 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Tihago\\Desktop\\ART\\git\\ARTTools\\art.tools.amaps.compiler.protobuf\\src\\Art.Tools.Amaps.Compiler.Protobuf\\bin\\Debug": {},
           "http://12.1.0.5/nuget/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -131,6 +142,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -141,12 +153,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

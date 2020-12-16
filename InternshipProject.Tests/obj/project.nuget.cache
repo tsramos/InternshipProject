@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dm1dJ5mALQv+QPfCQiKHZpdoZI70YxZhBbeBkx1h7BKCOI7hhihUbbqoCg94Kvt1T67JWOR8UBRYNsZfUPj0Mg==",
+  "dgSpecHash": "xdm2jhvYIR5m1BdX+ValZKy16jC70y+QVF4kVOOyq1rV61UB0591iQfG4anIgWTMbiGNmY/01ajqatCMQW2GlA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tihago\\Desktop\\Estagio\\InternshipProject\\InternshipProject.Tests\\InternshipProject.Tests.csproj",
+  "projectFilePath": "C:\\Users\\Tihago\\Desktop\\IFPR\\ProjetoEstagios\\InternshipProject\\InternshipProject.Tests\\InternshipProject.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tihago\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\Tihago\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
@@ -53,7 +53,8 @@
     "C:\\Users\\Tihago\\.nuget\\packages\\xunit.core\\2.4.0\\xunit.core.2.4.0.nupkg.sha512",
     "C:\\Users\\Tihago\\.nuget\\packages\\xunit.extensibility.core\\2.4.0\\xunit.extensibility.core.2.4.0.nupkg.sha512",
     "C:\\Users\\Tihago\\.nuget\\packages\\xunit.extensibility.execution\\2.4.0\\xunit.extensibility.execution.2.4.0.nupkg.sha512",
-    "C:\\Users\\Tihago\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.0\\xunit.runner.visualstudio.2.4.0.nupkg.sha512"
+    "C:\\Users\\Tihago\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.0\\xunit.runner.visualstudio.2.4.0.nupkg.sha512",
+    "C:\\Users\\Tihago\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
   ],
   "logs": []
 }
