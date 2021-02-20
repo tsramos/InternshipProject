@@ -14,6 +14,8 @@
         {
         }
 
+        private readonly IStudentRepository repository;
+
         public override void Validate(StudentModel entity)
         {
             StudentValidator validator = new StudentValidator();

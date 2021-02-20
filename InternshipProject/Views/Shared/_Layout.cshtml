@@ -1,74 +1,584 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - InternshipProject</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Volvo do Brasil Ltda.">
+    <meta name="keywords" content="Volvo do Brasil Ltda.">
+    <meta name="author" content="Volvo do Brasil Ltda. - Fábio Bussolin Bueno">
+    <title>@ViewData["Title"]</title>
 
-    <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
-    </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>
+    <link rel="apple-touch-icon" href="~/images/ico/volvo-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="~/images/ico/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="~/css/vendors.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/ui/prism.min.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/extensions/sweetalert.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/extensions/bootstrap-treeview.min.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/extensions/toastr.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/extensions/raty/jquery.raty.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/extensions/nouislider.min.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/extensions/datedropper.min.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/extensions/timedropper.min.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/extensions/jquery.toolbar.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/extensions/offline/themes/offline-theme-slide.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/extensions/offline/themes/offline-language-english.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/extensions/zoom.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/forms/icheck/icheck.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/forms/icheck/custom.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/forms/toggle/bootstrap-switch.min.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/forms/toggle/switchery.min.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/forms/spinner/jquery.bootstrap-touchspin.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/forms/selects/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/forms/selects/selectize.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/forms/selects/selectize.default.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/forms/selects/selectivity-full.min.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/forms/selects/jquery.selectBoxIt.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/forms/listbox/bootstrap-duallistbox.min.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/forms/tags/tagging.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css/pickers/daterange/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="~/css/app.css">
+    <link rel="stylesheet" type="text/css" href="~/css/core/menu/menu-types/vertical-menu-modern.css">
+    <link rel="stylesheet" type="text/css" href="~/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="~/css/core/colors/palette-callout.css">
+    <link rel="stylesheet" type="text/css" href="~/css/core/colors/palette-noui.css">
+    <link rel="stylesheet" type="text/css" href="~/css/core/colors/palette-switch.css">
+    <link rel="stylesheet" type="text/css" href="~/css/plugins/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/css/plugins/extensions/toastr.css">
+    <link rel="stylesheet" type="text/css" href="~/css/plugins/extensions/noui-slider.css">
+    <link rel="stylesheet" type="text/css" href="~/css/plugins/forms/checkboxes-radios.css">
+    <link rel="stylesheet" type="text/css" href="~/css/plugins/forms/checkboxes-radios.css">
+    <link rel="stylesheet" type="text/css" href="~/css/plugins/forms/dual-listbox.css">
+    <link rel="stylesheet" type="text/css" href="~/css/plugins/forms/extended/form-extended.css">
+    <link rel="stylesheet" type="text/css" href="~/css/plugins/forms/selectize/selectize.css">
+    <link rel="stylesheet" type="text/css" href="~/css/plugins/forms/selectivity/selectivity.css">
+    <link rel="stylesheet" type="text/css" href="~/css/plugins/forms/selectBoxIt/selectBoxIt.css">
+    <link rel="stylesheet" type="text/css" href="~/css/plugins/forms/switch.css">
+    <link rel="stylesheet" type="text/css" href="~/css/plugins/forms/validation/form-validation.css">
+    <link rel="stylesheet" type="text/css" href="~/css/plugins/forms/wizard.css">
+    <link rel="stylesheet" type="text/css" href="~/css/plugins/pickers/daterange/daterange.css">
+    <link rel="stylesheet" type="text/css" href="~/lib/kendo-ui/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib/kendo-ui/styles/kendo.material.min.css" />
+
+    <script src="~/js/core/libraries/jquery.min.js"></script>
+    <script src="~/js/core/libraries/jquery_ui/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="~/lib/kendo-ui/js/kendo.all.min.js"></script>
+    <script src="~/lib/kendo-ui/js/kendo.aspnetmvc.min.js"></script>
+    <script src="~/vendors/js/ui/popper.min.js" type="text/javascript"></script>
+    <script src="~/js/core/libraries/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/ui/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/ui/unison.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/ui/blockUI.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/ui/jquery-sliding-menu.js" type="text/javascript"></script>
+    <script src="~/vendors/js/ui/screenfull.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/ui/prism.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/extensions/sweetalert.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/extensions/bootstrap-treeview.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/extensions/toastr.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/extensions/jquery.raty.js" type="text/javascript"></script>
+    <script src="~/vendors/js/extensions/wNumb.js" type="text/javascript"></script>
+    <script src="~/vendors/js/extensions/nouislider.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/extensions/datedropper.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/extensions/timedropper.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/extensions/listjs/list.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/extensions/listjs/list.fuzzysearch.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/extensions/listjs/list.pagination.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/extensions/jquery.toolbar.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/extensions/jquery.knob.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/extensions/jquery.steps.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/extensions/offline.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/extensions/transition.js" type="text/javascript"></script>
+    <script src="~/vendors/js/extensions/zoom.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/animation/jquery.appear.js" type="text/javascript"></script>
+    <script src="~/vendors/js/forms/icheck/icheck.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/forms/toggle/bootstrap-checkbox.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/forms/toggle/bootstrap-switch.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/forms/toggle/switchery.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/forms/spinner/jquery.bootstrap-touchspin.js" type="text/javascript"></script>
+    <script src="~/vendors/js/forms/extended/typeahead/typeahead.bundle.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/forms/extended/typeahead/bloodhound.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/forms/extended/typeahead/handlebars.js" type="text/javascript"></script>
+    <script src="~/vendors/js/forms/extended/inputmask/jquery.inputmask.bundle.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/forms/extended/formatter/formatter.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/forms/extended/maxlength/bootstrap-maxlength.js" type="text/javascript"></script>
+    <script src="~/vendors/js/forms/extended/card/jquery.card.js" type="text/javascript"></script>
+    <script src="~/vendors/js/forms/repeater/jquery.repeater.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/forms/select/select2.full.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/forms/select/selectize.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/forms/select/selectivity-full.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/forms/select/jquery.selectBoxIt.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/forms/listbox/jquery.bootstrap-duallistbox.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/forms/tags/form-field.js" type="text/javascript"></script>
+    <script src="~/vendors/js/forms/tags/tagging.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/forms/validation/jqBootstrapValidation.js" type="text/javascript"></script>
+    <script src="~/vendors/js/forms/validation/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/pickers/dateTime/moment-with-locales.min.js" type="text/javascript"></script>
+    <script src="~/vendors/js/pickers/daterange/daterangepicker.js" type="text/javascript"></script>
 </head>
-<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+<body class="vertical-layout vertical-menu-modern 2-columns menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+    <!-- fixed-top-->
+    <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-light navbar-border navbar-shadow">
+        <div class="navbar-wrapper">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">InternshipProject</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                <ul class="nav navbar-nav flex-row">
+                    <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
+                    <li class="nav-item mr-auto">
+                        <a class="navbar-brand" href="/">
+                            <img class="brand-logo" alt="modern admin logo" src="~/images/logo/logo.png">
+                            <h3 class="brand-text">Brazil Portal</h3>
+                        </a>
+                    </li>
+                    <li class="nav-item d-none d-md-block float-right"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="toggle-icon ft-toggle-right font-medium-3 blue-grey darken-3" data-ticon="ft-toggle-right"></i></a></li>
+                    <li class="nav-item d-md-none">
+                        <a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="la la-ellipsis-v"></i></a>
+                    </li>
                 </ul>
+            </div>
+            <div class="navbar-container content">
+                <div class="collapse navbar-collapse" id="navbar-mobile">
+                    <ul class="nav navbar-nav mr-auto float-left">
+                        <li class="nav-item d-none d-md-block"><a class="nav-link nav-link-expand" href="#"><i class="ficon ft-maximize"></i></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav float-right">
+                        <li class="dropdown dropdown-language nav-item">
+                            <a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false"><i class="flag-icon flag-icon-br"></i><span class="selected-language"></span></a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown-flag">
+                                <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-br"></i> Portuguese</a>
+                                <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-es"></i> Spanish</a>
+                                <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-gb"></i> English</a>
+                            </div>
+                        </li>
+                        <li class="dropdown dropdown-user nav-item">
+                            <a class="dropdown-toggle nav-link dropdown-user-link">
+                                <span class="mr-1">
+                                    Olá,
+                                    <span class="user-name text-bold-700">Fábio Bueno</span>
+                                </span>
+                                <span class="avatar avatar-online">
+                                    <img src="~/images/portrait/small/avatar-s-19.png" alt="avatar"><i></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
-
-    <partial name="_CookieConsentPartial" />
-
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2020 - InternshipProject</p>
-        </footer>
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+    <div class="main-menu menu-fixed menu-light menu-shadow menu-accordion" data-scroll-to-active="true">
+        <div class="main-menu-content">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                <li class="nav-item active">
+                    <a href="/"><i class="la la-home"></i><span class="menu-title">Home</span></a>
+                </li>
+                <li class=" nav-item">
+                    <a href="/sample/kendoui"><i class="la la-eye"></i><span class="menu-title" data-i18n="nav.kendoui.main">Kendo UI</span></a>
+                </li>
+                <li class=" navigation-header">
+                    <span data-i18n="nav.category.layouts">Layouts</span>
+                    <i class="la la-ellipsis-h ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Layouts"></i>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Page layouts</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a class="menu-item" href="/sample/layout_light" data-i18n="nav.page_layouts.light_layout">Light layout</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" navigation-header">
+                    <span data-i18n="nav.category.general">General</span>
+                    <i class="la la-ellipsis-h ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="General"></i>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="la la-paint-brush"></i><span class="menu-title" data-i18n="nav.color_palette.main">Color Palette</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a class="menu-item" href="/sample/color_palette_primary" data-i18n="nav.color_palette.color_palette_primary">Primary palette</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/color_palette_danger" data-i18n="nav.color_palette.color_palette_danger">Danger palette</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/color_palette_success" data-i18n="nav.color_palette.color_palette_success">Success palette</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/color_palette_warning" data-i18n="nav.color_palette.color_palette_warning">Warning palette</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/color_palette_info" data-i18n="nav.color_palette.color_palette_info">Info palette</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/color_palette_red" data-i18n="nav.color_palette.color_palette_red">Red palette</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/color_palette_pink" data-i18n="nav.color_palette.color_palette_pink">Pink palette</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/color_palette_purple" data-i18n="nav.color_palette.color_palette_purple">Purple palette</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/color_palette_blue" data-i18n="nav.color_palette.color_palette_blue">Blue palette</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/color_palette_cyan" data-i18n="nav.color_palette.color_palette_cyan">Cyan palette</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/color_palette_teal" data-i18n="nav.color_palette.color_palette_teal">Teal palette</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/color_palette_yellow" data-i18n="nav.color_palette.color_palette_yellow">Yellow palette</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/color_palette_amber" data-i18n="nav.color_palette.color_palette_amber">Amber palette</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/color_palette_blue_grey" data-i18n="nav.color_palette.color_palette_blue_grey">Blue Grey palette</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="/sample/changelog"><i class="la la-copy"></i><span class="menu-title" data-i18n="nav.changelog.main">Changelog</span><span class="badge badge badge-pill badge-warning float-right">1.0</span></a>
+                </li>
+                <li class="disabled nav-item">
+                    <a href="#"><i class="la la-eye-slash"></i><span class="menu-title" data-i18n="nav.disabled_menu.main">Disabled Menu</span></a>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="la la-android"></i><span class="menu-title" data-i18n="nav.menu_levels.main">Menu levels</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a class="menu-item" href="#" data-i18n="nav.menu_levels.second_level">Second level</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="#" data-i18n="nav.menu_levels.second_level_child.main">Second level child</a>
+                            <ul class="menu-content">
+                                <li>
+                                    <a class="menu-item" href="#" data-i18n="nav.menu_levels.second_level_child.third_level">Third level</a>
+                                </li>
+                                <li>
+                                    <a class="menu-item" href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.main">Third level child</a>
+                                    <ul class="menu-content">
+                                        <li>
+                                            <a class="menu-item" href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level1">Fourth level</a>
+                                        </li>
+                                        <li>
+                                            <a class="menu-item" href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2">Fourth level</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" navigation-header">
+                    <span data-i18n="nav.category.ui">User Interface</span><i class="la la-ellipsis-h ft-minus" data-toggle="tooltip"
+                                                                              data-placement="right" data-original-title="User Interface"></i>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="la la-tablet"></i><span class="menu-title" data-i18n="nav.cards.main">Cards</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a class="menu-item" href="/sample/card_bootstrap" data-i18n="nav.cards.card_bootstrap">Bootstrap</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/card_headings" data-i18n="nav.cards.card_headings">Headings</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/card_options" data-i18n="nav.cards.card_options">Options</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/card_actions" data-i18n="nav.cards.card_actions">Action</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="la la-compass"></i><span class="menu-title" data-i18n="nav.content.main">Content</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a class="menu-item" href="/sample/content_grid" data-i18n="nav.content.content_grid">Grid</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/content_typography" data-i18n="nav.content.content_typography">Typography</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/content_text_utilities" data-i18n="nav.content.content_text_utilities">Text utilities</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/content_syntax_highlighter" data-i18n="nav.content.content_syntax_highlighter">Syntax highlighter</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/content_helper_classes" data-i18n="nav.content.content_helper_classes">Helper classes</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="la la-server"></i><span class="menu-title" data-i18n="nav.components.main">Components</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a class="menu-item" href="/sample/component_alerts" data-i18n="nav.components.component_alerts">Alerts</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/component_callout" data-i18n="nav.components.component_callout">Callout</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="#" data-i18n="nav.components.components_buttons.main">Buttons</a>
+                            <ul class="menu-content">
+                                <li>
+                                    <a class="menu-item" href="/sample/component_buttons_basic" data-i18n="nav.components.components_buttons.component_buttons_basic">Basic Buttons</a>
+                                </li>
+                                <li>
+                                    <a class="menu-item" href="/sample/component_buttons_extended" data-i18n="nav.components.components_buttons.component_buttons_extended">Extended Buttons</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/component_carousel" data-i18n="nav.components.component_carousel">Carousel</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/component_collapse" data-i18n="nav.components.component_collapse">Collapse</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/component_dropdowns" data-i18n="nav.components.component_dropdowns">Dropdowns</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/component_list_group" data-i18n="nav.components.component_list_group">List Group</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/component_modals" data-i18n="nav.components.component_modals">Modals</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/component_pagination" data-i18n="nav.components.component_pagination">Pagination</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/component_navs_component" data-i18n="nav.components.component_navs_component">Navs Component</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/component_tabs_component" data-i18n="nav.components.component_tabs_component">Tabs Component</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/component_pills_component" data-i18n="nav.components.component_pills_component">Pills Component</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/component_tooltips" data-i18n="nav.components.component_tooltips">Tooltips</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/component_popovers" data-i18n="nav.components.component_popovers">Popovers</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/component_badges" data-i18n="nav.components.component_badges">Badges</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/component_pill_badges">Pill Badges</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/component_progress" data-i18n="nav.components.component_progress">Progress</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/component_media_objects" data-i18n="nav.components.component_media_objects">Media Objects</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/component_scrollable" data-i18n="nav.components.component_scrollable">Scrollable</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/component_spinners" data-i18n="nav.components.component_spinners">Spinners</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="la la-diamond"></i><span class="menu-title" data-i18n="nav.extra_components.main">Extra Components</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a class="menu-item" href="/sample/ex_component_sweet_alerts" data-i18n="nav.extra_components.ex_component_sweet_alerts">Sweet Alerts</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/ex_component_tree_views" data-i18n="nav.extra_components.ex_component_tree_views">Tree Views</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/ex_component_toastr" data-i18n="nav.extra_components.ex_component_toastr">Toastr</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/ex_component_ratings" data-i18n="nav.extra_components.ex_component_ratings">Ratings</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/ex_component_noui_slider" data-i18n="nav.extra_components.ex_component_noui_slider">NoUI Slider</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/ex_component_date_time_dropper" data-i18n="nav.extra_components.ex_component_date_time_dropper">Date Time Dropper</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/ex_component_lists" data-i18n="nav.extra_components.ex_component_lists">Lists</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/ex_component_toolbar" data-i18n="nav.extra_components.ex_component_toolbar">Toolbar</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/ex_component_knob" data-i18n="nav.extra_components.ex_component_knob">Knob</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/ex_component_offline" data-i18n="nav.extra_components.ex_component_offline">Offline</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/ex_component_zoom" data-i18n="nav.extra_components.ex_component_zoom">Zoom</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="/sample/icons"><i class="la la-eye"></i><span class="menu-title" data-i18n="nav.icons.main">Icons</span></a>
+                </li>
+                <li class=" nav-item">
+                    <a href="/sample/animation"><i class="la la-spinner spinner"></i><span class="menu-title" data-i18n="nav.animation.main">Animation</span></a>
+                </li>
+                <li class=" navigation-header">
+                    <span data-i18n="nav.category.forms">Forms</span><i class="la la-ellipsis-h ft-minus" data-toggle="tooltip"
+                                                                        data-placement="right" data-original-title="Forms"></i>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="la la-terminal"></i><span class="menu-title" data-i18n="nav.form_elements.main">Form Elements</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a class="menu-item" href="/sample/form_inputs" data-i18n="nav.form_elements.form_inputs">Form Inputs</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/form_input_groups" data-i18n="nav.form_elements.form_input_groups">Input Groups</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/form_input_grid" data-i18n="nav.form_elements.form_input_grid">Input Grid</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/form_extended_inputs" data-i18n="nav.form_elements.form_extended_inputs">Extended Inputs</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/form_checkboxes_radios" data-i18n="nav.form_elements.form_checkboxes_radios">Checkboxes &amp; Radios</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/form_switch" data-i18n="nav.form_elements.form_switch">Switch</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="#" data-i18n="nav.form_elements.form_select.main">Select</a>
+                            <ul class="menu-content">
+                                <li>
+                                    <a class="menu-item" href="/sample/form_select2" data-i18n="nav.form_elements.form_select.form_select2">Select2</a>
+                                </li>
+                                <li>
+                                    <a class="menu-item" href="/sample/form_selectize" data-i18n="nav.form_elements.form_select.form_selectize">Selectize</a>
+                                </li>
+                                <li>
+                                    <a class="menu-item" href="/sample/form_selectivity" data-i18n="nav.form_elements.form_select.form_selectivity">Selectivity</a>
+                                </li>
+                                <li>
+                                    <a class="menu-item" href="/sample/form_select_box_it" data-i18n="nav.form_elements.form_select.form_select_box_it">Select Box It</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/form_dual_listbox" data-i18n="nav.form_elements.form_dual_listbox">Dual Listbox</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/form_tags_input" data-i18n="nav.form_elements.form_tags_input">Tags Input</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/form_validation" data-i18n="nav.form_elements.form_validation">Validation</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="la la-file-text"></i><span class="menu-title" data-i18n="nav.form_layouts.main">Form Layouts</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a class="menu-item" href="/sample/form_layout_basic" data-i18n="nav.form_layouts.form_layout_basic">Basic Forms</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/form_layout_horizontal" data-i18n="nav.form_layouts.form_layout_horizontal">Horizontal Forms</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/form_layout_hidden_labels" data-i18n="nav.form_layouts.form_layout_hidden_labels">Hidden Labels</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/form_layout_form_actions" data-i18n="nav.form_layouts.form_layout_form_actions">Form Actions</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/form_layout_row_separator" data-i18n="nav.form_layouts.form_layout_row_separator">Row Separator</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/form_layout_bordered" data-i18n="nav.form_layouts.form_layout_bordered">Bordered</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/form_layout_striped_rows" data-i18n="nav.form_layouts.form_layout_striped_rows">Striped Rows</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/form_layout_striped_labels" data-i18n="nav.form_layouts.form_layout_striped_labels">Striped Labels</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="la la-paste"></i><span class="menu-title" data-i18n="nav.form_wizard.main">Form Wizard</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a class="menu-item" href="/sample/form_wizard_circle_style" data-i18n="nav.form_wizard.form_wizard_circle_style">Circle Style</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/sample/form_wizard_notification_style" data-i18n="nav.form_wizard.form_wizard_notification_style">Notification Style</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="/sample/form_repeater"><i class="la la-repeat"></i><span class="menu-title" data-i18n="nav.form_repeater.main">Form Repeater</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="app-content content">
+        <div class="content-wrapper">
+            @RenderBody()
+        </div>
     </div>
 
-    <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
-        </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
-    </environment>
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+    <footer class="footer footer-static footer-light navbar-border navbar-shadow">
+        <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
+            <span class="float-md-right d-block d-md-inline-block">
+                Copyright &copy; 2018-@Html.Raw(string.Format("{0:yyyy}", DateTime.Now)) Volvo do Brasil Ltda., All rights reserved.
+            </span>
+        </p>
+    </footer>
 
-    @RenderSection("Scripts", required: false)
+    <script src="~/js/core/app-menu.js" type="text/javascript"></script>
+    <script src="~/js/core/app.js" type="text/javascript"></script>
+    <script src="~/js/scripts/customizer.js" type="text/javascript"></script>
+    <script src="~/js/scripts/tooltip/tooltip.js" type="text/javascript"></script>
+    <script src="~/js/scripts/popover/popover.js" type="text/javascript"></script>
+    <script src="~/js/scripts/extensions/sweet-alerts.js" type="text/javascript"></script>
+    <script src="~/js/scripts/extensions/tree-view.js" type="text/javascript"></script>
+    <script src="~/js/scripts/extensions/toastr.js" type="text/javascript"></script>
+    <script src="~/js/scripts/extensions/rating.js" type="text/javascript"></script>
+    <script src="~/js/scripts/extensions/noui-slider.js" type="text/javascript"></script>
+    <script src="~/js/scripts/extensions/date-time-dropper.js" type="text/javascript"></script>
+    <script src="~/js/scripts/extensions/list.js" type="text/javascript"></script>
+    <script src="~/js/scripts/extensions/toolbar.js" type="text/javascript"></script>
+    <script src="~/js/scripts/extensions/knob.js" type="text/javascript"></script>
+    <script src="~/js/scripts/extensions/offline.js" type="text/javascript"></script>
+    <script src="~/js/scripts/animation/animation.js" type="text/javascript"></script>
+    <script src="~/js/scripts/forms/checkbox-radio.js" type="text/javascript"></script>
+    <script src="~/js/scripts/forms/switch.js" type="text/javascript"></script>
+    <script src="~/js/scripts/forms/input-groups.js" type="text/javascript"></script>
+    <script src="~/js/scripts/forms/extended/form-typeahead.js" type="text/javascript"></script>
+    <script src="~/js/scripts/forms/extended/form-inputmask.js" type="text/javascript"></script>
+    <script src="~/js/scripts/forms/extended/form-formatter.js" type="text/javascript"></script>
+    <script src="~/js/scripts/forms/extended/form-maxlength.js" type="text/javascript"></script>
+    <script src="~/js/scripts/forms/extended/form-card.js" type="text/javascript"></script>
+    <script src="~/js/scripts/forms/select/form-select2.js" type="text/javascript"></script>
+    <script src="~/js/scripts/forms/select/form-selectize.js" type="text/javascript"></script>
+    <script src="~/js/scripts/forms/select/form-selectivity.js" type="text/javascript"></script>
+    <script src="~/js/scripts/forms/select/form-selectBoxIt.js" type="text/javascript"></script>
+    <script src="~/js/scripts/forms/listbox/form-duallistbox.js" type="text/javascript"></script>
+    <script src="~/js/scripts/forms/tags/tagging.js" type="text/javascript"></script>
+    <script src="~/js/scripts/forms/validation/form-validation.js" type="text/javascript"></script>
+    <script src="~/js/scripts/forms/wizard-steps.js" type="text/javascript"></script>
+    <script src="~/js/scripts/forms/form-repeater.js" type="text/javascript"></script>
 </body>
 </html>
